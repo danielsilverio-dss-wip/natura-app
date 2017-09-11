@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_project"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
+    tools:context="br.com.fiap.natura.naturaapp.ProjectListActivity"
+    android:orientation="vertical"
+    android:background="@color/corFundoClara">
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/corFundoEscura">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:src="@drawable/back"
+                android:onClick="voltar"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Projetos"
+                android:textSize="27dp"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:textColor="@color/corPadraoForte"/>
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:src="@drawable/menu"/>
+        </RelativeLayout>
+    </Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/layoutContainerIcones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentStart="true">
+
+        <ListView android:id="@+id/lvProjetos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ListView>
+<!--
+
+        <RelativeLayout
+            android:id="@+id/layoutIcone1"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/corFundoEscura"
+            android:padding="0dp">
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/imgIcone1"
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_projeto1"/>
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/txtIcon1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@id/imgFoto"
+                android:layout_centerHorizontal="true"
+                android:text="Projeto Um"
+                android:gravity="center"
+                android:textColor="@color/corPadraoForte"
+                android:textSize="23dp"
+                android:layout_below="@id/imgIcone1"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutIcone2"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/corFundoEscura"
+            android:padding="0dp"
+            android:layout_below="@id/layoutIcone1">
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/imgIcone2"
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_projeto1"/>
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/txtIcon2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@id/imgFoto"
+                android:layout_centerHorizontal="true"
+                android:text="Projeto Dois"
+                android:gravity="center"
+                android:textColor="@color/corPadraoForte"
+                android:textSize="23dp"
+                android:layout_below="@id/imgIcone2"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutIcone3"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/corFundoEscura"
+            android:padding="0dp"
+            android:layout_below="@id/layoutIcone2">
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/imgIcone3"
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_projeto3"/>
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/txtIcon3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@id/imgFoto"
+                android:layout_centerHorizontal="true"
+                android:text="Projeto Três"
+                android:gravity="center"
+                android:textColor="@color/corPadraoForte"
+                android:textSize="23dp"
+                android:layout_below="@id/imgIcone3"/>
+        </RelativeLayout>
+-->
+
+    </RelativeLayout>
+</RelativeLayout>
