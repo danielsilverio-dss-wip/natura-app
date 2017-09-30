@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_donation_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
+    tools:context="br.com.fiap.natura.naturaapp.ProjectActivity"
+    android:orientation="vertical"
+    android:background="@color/corFundoClara">
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/corFundoEscura">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:src="@drawable/back"
+                android:onClick="voltar"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Projeto"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:textColor="@color/corPadraoForte"/>
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/menu" />
+        </RelativeLayout>
+    </Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:id="@+id/layoutContainerTela"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+
+            android:layout_alignParentStart="true">
+
+            <RelativeLayout
+                android:id="@+id/layoutContainerProjeto"
+                android:layout_centerHorizontal="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/corFundoEscura"
+                android:padding="0dp">
+                <ImageView
+                    android:id="@+id/imgProjeto"
+                    android:layout_width="fill_parent"
+                    android:layout_height="100dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_projeto1"/>
+                <TextView
+                    android:id="@+id/txtNomeProjeto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Projeto Um"
+                    android:textColor="@color/corPadraoForte"
+                    android:textSize="22dp"
+                    android:layout_below="@id/imgProjeto"/>
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_below="@id/txtNomeProjeto"
+                    android:layout_height="80dp">
+
+                    <TextView
+                        android:id="@+id/txtDescricaoProjeto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="&quot;Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet.&quot;"
+                        android:textColor="@color/corPadraoForte"
+                        android:textSize="17dp"/>
+
+                </ScrollView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/containerStatusProjeto"
+                android:layout_centerHorizontal="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/corFundoClara"
+                android:padding="0dp"
+                android:layout_below="@id/layoutContainerProjeto">
+                <TextView
+                    android:id="@+id/txtStatusProjeto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="O projeto está em "
+                    android:textColor="@color/corPadraoForte"
+                    android:textSize="17dp"/>
+                <TextView
+                    android:id="@+id/txtPorcentagemStatusProjeto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0%"
+                    android:textColor="@color/corPadraoForte"
+                    android:layout_alignParentRight="true"
+                    android:textSize="17dp"/>
+                <ProgressBar
+                    android:id="@+id/pgbStatusProjeto"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_below="@id/txtPorcentagemStatusProjeto"/>
+            </RelativeLayout>
+
+            <ListView android:id="@+id/lvProdutos"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_below="@id/containerStatusProjeto">
+
+            </ListView>
+            <!--
+            <RelativeLayout
+                android:id="@+id/containerProdutos"
+                android:layout_centerHorizontal="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/corFundoClara"
+                android:padding="0dp"
+                android:layout_below="@id/containerStatusProjeto">
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/txtSelecioneProdutos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Selecione um produto"
+                    android:textColor="@color/corPadraoForte"
+                    android:textSize="17dp"/>
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/spnListaProdutos"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/corPadraoForte"
+                    android:textSize="17dp"
+                    android:layout_below="@id/txtSelecioneProdutos"/>
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/txtStatusProduto"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_alignParentRight="true"
+                    android:textAlignment="center"
+                    android:text="0/0"
+                    android:textColor="@color/corPadraoForte"
+                    android:textSize="17dp"
+                    android:layout_below="@id/txtSelecioneProdutos"/>
+            </RelativeLayout>
+            -->
+            <RelativeLayout
+                android:id="@+id/containerDoar"
+                android:layout_centerHorizontal="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/corFundoClara"
+                android:padding="0dp"
+                android:layout_below="@id/lvProdutos">
+                <Button
+                    android:id="@+id/btnDoar"
+                    android:text="Doar"
+                    android:textColor="@color/corPastelClara"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:paddingTop="10dp"
+                    android:paddingRight="30dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="30dp"
+                    android:textSize="18dp"
+                    android:background="@drawable/border_button_style"
+                    android:onClick="doar" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+</RelativeLayout>

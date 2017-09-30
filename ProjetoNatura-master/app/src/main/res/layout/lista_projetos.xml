@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/containerProjeto"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/corFundoEscura"
+        android:padding="0dp">
+        <ImageView
+            android:id="@+id/lista_projetos_imagem"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_projeto1"/>
+        <TextView
+            android:id="@+id/lista_projetos_nome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_centerHorizontal="true"
+            android:text="Projeto Um"
+            android:gravity="center"
+            android:textColor="@color/corPadraoForte"
+            android:textSize="23dp"
+            android:layout_below="@id/lista_projetos_imagem"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_below="@id/lista_projetos_imagem"/>
+    </RelativeLayout>
+
+</LinearLayout>

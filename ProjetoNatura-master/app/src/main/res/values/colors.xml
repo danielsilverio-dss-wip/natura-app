@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#dbe9da</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="fundo">#f3f8f2</color>
+
+    <color name="corPadraoForte">#5d9457</color>
+    <color name="corPadraoFraca">#47af3c</color>
+    <color name="corFundoClara">#f3f8f2</color>
+    <color name="corFundoEscura">#dbe9da</color>
+
+    <color name="corPastelClara">#f3f8f2</color>
+    <color name="corPastelEscura">#dbe9da</color>
+
+</resources>
